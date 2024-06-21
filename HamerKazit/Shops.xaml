@@ -1,0 +1,43 @@
+﻿<Page x:Class="HamerKazit.Shops"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:HamerKazit"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Shops">
+
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="/Assets/shopsList.jpg" />
+        </Grid.Background>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="mc" Click="mc_Click" Height="200" Width="260" >
+            <Image Source="/Assets/McDonald's_logo.png" />
+        </Button>
+        <Button x:Name="kfc" Click="kfc_Click" Height="200" Width="235" Grid.Column="1" >
+            <Image Source="/Assets/KFC-LOGO.jpg" />
+        </Button>
+        <Button x:Name="shwarma" Click="shwarma_Click" Height="200" Width="200" Grid.Column="2" >
+            <Image Source="/Assets/shawarmaIcon.jpg"/>
+        </Button>
+        <Button x:Name="flowers" Click="flowers_Click" Height="200" Width="235" Grid.Row="1" >
+            <Image Source="/Assets/flowersicon.jpg"/>
+        </Button>
+        <Button x:Name="digital" Click="digital_Click" Height="200" Width="200" Grid.Row="1" Grid.Column="1">
+            <Image Source="/Assets/digital-store-logo.jpg"/>
+        </Button>
+        <Button x:Name="traveler" Click="traveler_Click" Height="200" Width="200" Grid.Row="1" Grid.Column="2" >
+            <Image Source="/Assets/lametayel_logo.png"/>
+        </Button>
+    </Grid>
+</Page>
