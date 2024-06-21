@@ -36,8 +36,13 @@ namespace HamerKazit
             this.DataContext = passenger;
             //CityDB db = new CityDB();
             //cityLst = db.SelectAll(); ;  // ממלא את רשימת הערים בדף
-            srv = new Service1Client();
-            ServiceReference1.CityList cityLst = srv.SelectAllCities();
+            this.srv = new Service1Client();
+            this.cityLst = srv.SelectAllCities();
+            if (cityLst == null)
+            {
+                Console.WriteLine("couldnt get city list");
+                System.Environment.Exit(-1);
+            }
             this.CityCbox.ItemsSource = cityLst;
         }
 
